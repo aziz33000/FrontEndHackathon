@@ -1,0 +1,10 @@
+<simple-table [data]="(rawdatas$ | async)" [columns]="searchColumn" size="small" ps="5" [toTopInChange]="false">
+</simple-table>
+
+<nz-upload nzType="drag" [nzMultiple]="true" [nzLimit]="2" nzAction="https://jsonplaceholder.typicode.com/posts/" (nzChange)="handleChange($event)">
+    <p class="ant-upload-drag-icon">
+        <i class="anticon anticon-upload"></i>
+    </p>
+    <p class="ant-upload-text">Click to select a file or drag a file here</p>
+    <p class="ant-upload-hint">Support for single files or bulk uploads</p>
+</nz-upload>

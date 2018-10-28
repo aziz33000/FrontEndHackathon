@@ -1,0 +1,41 @@
+<nz-card [nzBordered]="false" style="background-color:rgb(52, 58, 64);">
+    <nz-row [nzGutter]="24">
+        <nz-col [nzSpan]="6">
+            <nz-card nzTitle="Tool Library" class="ant-card__body-nopadding" style="height: 750px; background-color:rgb(52, 58, 64); ">
+                <a (click)="addColumn(i)" class="d-block py-sm px-md" [ngClass]="{'bg-primary-light text-white':active===0}" *ngFor="let item of data; let i = index" style="color:#AAAAAA">{{item}}</a>
+            </nz-card>
+        </nz-col>
+        <nz-col [nzSpan]="12">
+            <div id="flow-panel" style=" position:absolute;width:100%;height:
+                750px;background-color: rgba(0, 0, 0, 0.24) ">
+                <nz-col nzSpan="12">
+                    <li *ngFor="let x of query">
+                        <ul>{{x}}</ul>
+                    </li>
+                </nz-col>
+                <nz-col nzSpan="12">
+                    <li *ngFor = "let y of qry">
+                        <ul> {{y}}</ul>
+                    </li>
+                </nz-col>
+                
+                <div nz-row>
+                        <a (click)="backspace()">
+                        <div nz-col class="bg-primary rounded-md"  nzSpan="9" style="margin-bottom: 10px;margin-right: 5px"  >
+                            <div class="mt0">Backspace</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </nz-col>
+        <nz-col [nzSpan]="6" style="background-color:rgb(52, 58, 64);">
+            <div style="padding-left:3%;">
+                    <nz-card nzTitle="Tool Library" class="ant-card__body-nopadding" style="height: 750px; background-color:rgb(52, 58, 64); ">
+                        <a (click)="addColumn1(i)" class="d-block py-sm px-md" [ngClass]="{'bg-primary-light text-white':active===0}" *ngFor="let item of data; let i = index" style="color:#AAAAAA">{{item}}</a>
+                    </nz-card>
+            
+            </div>
+        </nz-col>
+        
+    </nz-row>
+</nz-card>

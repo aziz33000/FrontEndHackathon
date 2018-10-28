@@ -1,0 +1,6 @@
+<simple-table [data]="(rawdatas$ | async)" [columns]="selectColumn" size="small" ps="5" [toTopInChange]="false" (checkboxChange)="checkboxChange($event)">
+</simple-table>
+<div class="text-center">
+    <button nz-button nzType="primary" (click)="queren()">confirm</button>
+    <button nz-button class="ml-sm">cancel</button>
+</div>
